@@ -82,7 +82,7 @@ def app():
                 Kami sertakan data histori cuaca Kota Surabaya dari tahun 2023 sebagai berikut.""")
 
     # Load data
-    filepath = 'data/df_hujan.csv'
+    filepath = 'df_hujan.csv'
     df = load_data(filepath)
     df['tanggal'] = pd.to_datetime(df['tanggal'], format='%Y-%m-%d')
     df.set_index('tanggal', inplace=True)
