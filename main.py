@@ -21,7 +21,7 @@ class MultiApp:
     def run():
         # Sidebar
         with st.sidebar:
-            logomain = Image.open("https://drive.google.com/file/d/1C60ZXhaL03sEhhJGzLty1XMYZmqDFA_5/view?usp=drive_link")
+            logomain = Image.open("home.png")
             st.image(logomain)        
             app = option_menu(
                 menu_title='Dashboard',
