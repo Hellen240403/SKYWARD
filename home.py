@@ -112,7 +112,7 @@ def app():
         """)
 
     # Load Dataset
-    df = load_data("https://drive.google.com/file/d/13oCqAjNYCNUqwM1_IwBRJZG-9heqVpJV/view?usp=drive_link")
+    df = load_data("df_hujan.csv")
     df['tanggal'] = pd.to_datetime(df['tanggal'])
     df.set_index('tanggal', inplace=True)
 
