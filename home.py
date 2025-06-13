@@ -14,7 +14,7 @@ def app():
 
     with st.expander("Pendahuluan"):
 
-        tab1, tab2, tab3, tab4 = st.tabs(["Latar Belakang", "Tujuan", "Manfaat"])
+        tab1, tab2, tab3 = st.tabs(["Latar Belakang", "Tujuan", "Manfaat"])
 
     with tab1:
         st.info("""Prediksi cuaca adalah proses untuk memprediksi kondisi atmosfer 
@@ -113,8 +113,8 @@ def app():
 
     # Load Dataset
     df = load_data("data/df_hujan.csv")
-    df['tanggal'] = pd.to_datetime(df['tanggal'])
-    df.set_index('tanggal', inplace=True)
+    df['Tanggal'] = pd.to_datetime(df['Tanggal'])
+    df.set_index('Tanggal', inplace=True)
 
     #Menampilkan data hujan
     st.divider()
