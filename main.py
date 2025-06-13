@@ -1,7 +1,9 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-import home as home, eda, forecast, predict, about
+from PIL import Image
+
+import home as home, forecast, predict, about
 
 st.set_page_config(
     page_title="Dashboard"
@@ -48,7 +50,7 @@ class MultiApp:
         if app == "Forecast":
             forecast.app()    
         if app == "Prediction":
-            predict.app()        
+            prediction.app()        
         if app == 'About':
             about.app()     
              
