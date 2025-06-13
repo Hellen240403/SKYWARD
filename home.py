@@ -16,8 +16,8 @@ def app():
 
         tab1, tab2, tab3, tab4 = st.tabs(["Latar Belakang", "Tujuan", "Manfaat"])
 
-        with tab1:
-            st.info("""Prediksi cuaca adalah proses untuk memprediksi kondisi atmosfer 
+    with tab1:
+        st.info("""Prediksi cuaca adalah proses untuk memprediksi kondisi atmosfer 
             pada waktu tertentu di masa depan yang dilakukan dengan menganalisis data 
             meteorologi yang ada. Perkembangannya teknologi dan metode yang terus meningkat 
             membuat banyak pilihan untuk memprediksi cuaca dengan sangat canggih. Proses 
@@ -48,13 +48,13 @@ def app():
             yang akurat untuk Kota Surabaya dengan menggunakan metode Artificial Neural Network 
             (ANN) dan Long Short-Term Memory (LSTM) berdasarkan data cuaca terbaru. Adapaun tujuan 
             penelitian secara spesifik dijabarkan sebagai berikut. 
-	        1. Membangun model prediksi cuaca yang dapat memproyeksikan kondisi atmosfer Kota Surabaya 
+            1. Membangun model prediksi cuaca yang dapat memproyeksikan kondisi atmosfer Kota Surabaya 
             dengan menggunakan data meteorologi yang diambil dari BMKG (Badan Meteorologi, Klimatologi, 
             dan Geofisika) pada periode 2023-2025.
-	        2. Mengoptimalkan performa prediksi cuaca dengan memanfaatkan metode ANN dan LSTM untuk 
+            2. Mengoptimalkan performa prediksi cuaca dengan memanfaatkan metode ANN dan LSTM untuk 
             mengidentifikasi pola cuaca yang lebih kompleks, terutama yang berhubungan dengan 
             ketergantungan jangka panjang dalam data cuaca.
-	        3. Menilai akurasi model prediksi yang dibangun dengan membandingkan hasil prediksi dari 
+            3. Menilai akurasi model prediksi yang dibangun dengan membandingkan hasil prediksi dari 
             ANN dan LSTM untuk memastikan metode yang paling sesuai digunakan untuk prediksi cuaca Kota 
             Surabaya.
             4. Memberikan kontribusi dalam pengembangan model prediksi cuaca berbasis teknologi 
@@ -112,7 +112,7 @@ def app():
         """)
 
     # Load Dataset
-    df = load_data("df_hujan.csv")
+    df = load_data("data/df_hujan.csv")
     df['tanggal'] = pd.to_datetime(df['tanggal'])
     df.set_index('tanggal', inplace=True)
 
